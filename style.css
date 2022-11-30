@@ -1,0 +1,80 @@
+*{
+    margin: 0
+}
+body{
+    height: 100vh;
+    background-color: #131313;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gameboard{
+    height: 500px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* border: 1px solid red; */
+}
+.row{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cell{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 5rem;
+}
+.cell:hover{
+    cursor: pointer;
+    background-color: #3d3d3d;
+}
+#one{
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+}
+#two{
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+    border-bottom: 1px solid white;
+}
+#three{
+    border-left: 1px solid white;
+    border-bottom: 1px solid white;
+}
+#four{
+    border-right: 1px solid white;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+#five{
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+#six{
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+#seven{
+    border-right: 1px solid white;
+    border-top: 1px solid white;
+}
+#eight{
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+}
+#nine{
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+}
