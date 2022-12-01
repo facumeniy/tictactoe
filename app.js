@@ -68,7 +68,7 @@ function checkWin(){
         if(cellA === "" || cellB === "" || cellC === ""){
             continue;
         }
-        if(cellA === cellB && cellB && cellC){
+        if(cellA === cellB && cellB === cellC){
             isGameOver = true;
             break;
         }
@@ -99,7 +99,10 @@ for(let cell of allCells){
  }
 
  resetButton.addEventListener('click', () => {
-    gameboard.board = ["", "", "", "", "", "", "", "", ""];
+    for(i = 0; i < gameboard.board.length; i++){
+        gameboard.board[i] = "";
+    }
+    
     isGameOver = false;
     player1turn = true;
 
