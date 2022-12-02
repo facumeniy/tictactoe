@@ -8,9 +8,12 @@ const cell5 = document.getElementById("six");
 const cell6 = document.getElementById("seven");
 const cell7 = document.getElementById("eight");
 const cell8 = document.getElementById("nine");
+//
+const textDisplay = document.getElementById("text");
 const resetButton = document.getElementById("reset-button");
 //
 let player1turn = true;
+let player1win = false;
 let isGameOver = false;
 
 const playerFactory = (name, sign) => {
@@ -52,8 +55,8 @@ const gameboard = (() => {
     };
   })();
 
-const player1 = playerFactory('Player 1', "X");
-const player2 = playerFactory('Player 2', "O");
+const player1 = playerFactory('Player 1', "❌");
+const player2 = playerFactory('Player 2', "◯");
 
 function changeTurn(){
     player1turn = !player1turn;
@@ -70,10 +73,13 @@ function checkWin(){
         }
         if(cellA === cellB && cellB === cellC){
             isGameOver = true;
-            break;
+            break; 
         }
     }
     if(isGameOver === true){
+        if(player1win = true){
+            textDisplay.textContent = "GAME OVER";
+        }
         for(let cell of allCells){
             cell.classList.add("disable");
         }
@@ -85,12 +91,14 @@ for(let cell of allCells){
         if(player1turn === true){
             cell.textContent = player1.getSign();
             cell.classList.add("player-one");
+            textDisplay.textContent = "P2'S TURN";
             changeTurn();
             gameboard.update();
             checkWin();
         }else{
             cell.textContent = player2.getSign();
             cell.classList.add("player-two");
+            textDisplay.textContent = "P1'S TURN"
             changeTurn();
             gameboard.update();
             checkWin();
@@ -105,6 +113,8 @@ for(let cell of allCells){
     
     isGameOver = false;
     player1turn = true;
+    textDisplay.textContent = "P1'S TURN"
+
 
     for(let cell of allCells){
         cell.textContent = "";

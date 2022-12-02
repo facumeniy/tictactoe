@@ -1,21 +1,54 @@
 *{
     margin: 0;
     -webkit-user-select: none; /* Safari */        
--moz-user-select: none; /* Firefox */
--ms-user-select: none; /* IE10+/Edge */
-user-select: none; /* Standard */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+    font-family: 'Roboto', sans-serif;
 }
 body{
     height: 100vh;
-    background-color: #131313;
+    background-color: #F0EEF1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.left-pannel{
+    width: 20%;
+    height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
+}
+.title-container{
+    width: 100%;
+    margin-top: 20%;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
+.title{
+    font-size: 2.5em;
+    font-weight: 300;
+}
+.right-pannel{
+    width: 20%;
+    height: 100%;
+}
+.main-pannel{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
 .gameboard{
-    height: 500px;
-    width: 500px;
+    height: 450px;
+    width: 450px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -36,64 +69,107 @@ body{
     align-items: center;
     color: white;
     font-size: 5rem;
-    background-color: black;
+    background-color: #F0EEF1;
 }
 .cell:hover{
     cursor: pointer;
-    background-color: #3d3d3d;
+    background-color: #e2e2e2;
 }
 #one{
-    border-right: 1px solid white;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #171516;
 }
 #two{
-    border-right: 1px solid white;
-    border-left: 1px solid white;
-    border-bottom: 1px solid white;
+    border-right: 1px solid #171516;
+    border-left: 1px solid #171516;
+    border-bottom: 1px solid #171516;
 }
 #three{
-    border-left: 1px solid white;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #171516;
 }
 #four{
-    border-right: 1px solid white;
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
+    border-top: 1px solid #171516;
+    border-bottom: 1px solid #171516;
 }
 #five{
-    border-right: 1px solid white;
-    border-left: 1px solid white;
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
+    border-right: 1px solid #171516;
+    border-left: 1px solid #171516;
+    border-top: 1px solid #171516;
+    border-bottom: 1px solid #171516;
 }
 #six{
-    border-left: 1px solid white;
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
+    border-top: 1px solid #171516;
+    border-bottom: 1px solid #171516;
 }
 #seven{
-    border-right: 1px solid white;
-    border-top: 1px solid white;
+    border-top: 1px solid #171516;
 }
 #eight{
-    border-right: 1px solid white;
-    border-left: 1px solid white;
-    border-top: 1px solid white;
+    border-right: 1px solid #171516;
+    border-left: 1px solid #171516;
+    border-top: 1px solid #171516;
 }
 #nine{
-    border-left: 1px solid white;
-    border-top: 1px solid white;
+    border-top: 1px solid #171516;
 }
 .disable{
     pointer-events: none;
     opacity: 0.3;
-    background: #CCC;
 }
 .player-one{
     pointer-events: none;
-    color: blue;
+    color: rgb(92, 149, 255);
 }
 .player-two{
     pointer-events: none;
-    color: red;
+    color: rgb(199, 49, 49);
+}
+.button-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#reset-button{
+    height: 30px;
+    width: 100px;
+    border-radius: 20px;
+    border: none;
+    color: #F0EEF1;
+    background-color: #171516;
+}
+#reset-button:hover{
+    background-color: #302c2e;
+    cursor: pointer;
+}
+.text-container{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#text{
+    font-size: 30px;
+    font-weight: 300;
+}
+.footer{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-img-container{
+    margin-right: 10px;
+}
+#logo{
+    transition: all 0.3s;
+}
+#logo:hover{
+    cursor: pointer;
+    transform: scale(1.15) rotate(360deg);
+}
+#footer-text{
+    font-weight: 300;
+    font-size: 1em;
 }
