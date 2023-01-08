@@ -55,8 +55,8 @@ const gameboard = (() => {
     };
   })();
 
-const player1 = playerFactory('Player 1', "❌");
-const player2 = playerFactory('Player 2', "◯");
+const player1 = playerFactory('Player 1', "X");
+const player2 = playerFactory('Player 2', "O");
 
 function changeTurn(){
     player1turn = !player1turn;
